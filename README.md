@@ -1,4 +1,4 @@
- # Processamento de Captchas com Algoritmo Genético
+# Processamento de Captchas com Algoritmo Genético
 
 ## Visão Geral
 Este projeto implementa um sistema de processamento de imagens de captcha utilizando algoritmos genéticos para otimizar parâmetros de processamento de imagem. O objetivo é remover linhas e ruídos de imagens de captcha para melhorar a legibilidade dos caracteres, facilitando sua posterior leitura por sistemas OCR ou humanos.
@@ -45,31 +45,22 @@ Para que serve? Remover pequenos ruídos ou separar objetos grudados.
 1. Clone o repositório ou baixe os arquivos
 2. Instale as dependências necessárias:
    ```bash
-   pip install opencv-python numpy pandas matplotlib streamlit
+   pip install -r requirements.txt
    ```
 
 ## Uso
 
 ### Executar o Algoritmo Genético
-Para executar o algoritmo genético e processar os captchas:
-```bash
-python asa_genetico.py
-```
-Este comando processará todos os pares de captcha/target na pasta `imgs` e salvará os resultados.
-
-### Visualizar a Evolução com Streamlit
 Para iniciar a interface Streamlit e visualizar a evolução do algoritmo genético:
 ```bash
-python -m streamlit run asa_genetico_streamlit.py
+python -m streamlit run algoritmo_genetico_streamlit.py
 ```
 
 ## Estrutura de Arquivos
-- `asa.py`: Script básico de processamento de imagens com OpenCV  
-- `asa_genetico.py`: Implementação principal do algoritmo genético para processamento de captchas  
-- `asa_genetico_streamlit.py`: Interface Streamlit para visualização da evolução do algoritmo genético  
-- `imgs/`: Pasta contendo os pares de imagens de captcha e seus targets (ex: `captcha1.png`, `captcha1_target.png`)  
-- `samples/`: Pasta contendo imagens de captcha para processamento em lote  
-- `resultados/`: Pasta onde são salvos os resultados do processamento  
+- `algoritmo_genetico_streamlit.py`: Interface Streamlit para visualização da evolução do algoritmo genético
+- `imgs/`: Pasta contendo os pares de imagens de captcha e seus targets (ex: `captcha1.png`, `captcha1_target.png`)
+- `samples/`: Pasta contendo imagens de captcha para processamento em lote
+- `resultados/`: Pasta onde são salvos os resultados do processamento
 
 ## Fluxo de Trabalho
 
@@ -92,12 +83,9 @@ python -m streamlit run asa_genetico_streamlit.py
 ## Parâmetros Otimizados
 O algoritmo genético otimiza os seguintes parâmetros de processamento de imagem:
 
-- `threshold`: Valor de limiarização (50–150)  
-- `blur`: Tamanho do kernel de desfoque (1–5)  
-- `dilate_size`: Tamanho do kernel de dilatação (1–5)  
-- `dilate_shape`: Forma do kernel de dilatação (1–5)  
-- `erode_size`: Tamanho do kernel de erosão (1–5)  
-- `erode_shape`: Forma do kernel de erosão (1–5)  
-
-## Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para abrir *issues* ou enviar *pull requests* com melhorias.
+- `threshold`: Valor de limiarização (50–150)
+- `blur`: Tamanho do kernel de desfoque (1–5)
+- `dilate_size`: Tamanho do kernel de dilatação (1–5)
+- `dilate_shape`: Forma do kernel de dilatação (1–5)
+- `erode_size`: Tamanho do kernel de erosão (1–5)
+- `erode_shape`: Forma do kernel de erosão (1–5)

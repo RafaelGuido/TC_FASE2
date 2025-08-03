@@ -8,8 +8,6 @@ import time
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime
-import glob
-import shutil
 
 # Configuração da página Streamlit
 st.set_page_config(page_title="Visualização do Algoritmo Genético", layout="wide")
