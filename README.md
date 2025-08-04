@@ -2,14 +2,14 @@
 
 ## 📋 Índice
 
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Características e Funcionalidades](#características-e-funcionalidades)
-- [Interface de Visualização com Streamlit](#interface-de-visualização-com-streamlit)
-- [Arquitetura](#arquitetura)
-- [Instalação e Execução do Projeto](#instalação-e-execução-do-projeto)
-- [Configuração](#configuração)
-- [Equipe](#equipe)
-- [Licença](#licença)
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Características e Funcionalidades](#-características-e-funcionalidades)
+- [Interface de Visualização com Streamlit](#-interface-de-visualização-com-streamlit)
+- [Arquitetura](#-arquitetura)
+- [Instalação e Execução do Projeto](#-instalação-e-execução-do-projeto)
+- [Configuração](#-configuração)
+- [Equipe](#-equipe)
+- [Licença](#-licença)
 
 ## 🎯 Sobre o Projeto
 
