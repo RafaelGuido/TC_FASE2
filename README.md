@@ -1,68 +1,86 @@
-# Processamento de Captchas com Algoritmo Genético
+# 🧬 Algoritmo Genético - Otimização Evolutiva de Captcha
 
-## Visão Geral
-Este projeto implementa um sistema de processamento de imagens de captcha utilizando algoritmos genéticos para otimizar parâmetros de processamento de imagem. O objetivo é remover linhas e ruídos de imagens de captcha para melhorar a legibilidade dos caracteres, facilitando sua posterior leitura por sistemas OCR ou humanos.
+## 📋 Índice
 
-## Funcionalidades
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Características e Funcionalidades](#características-e-funcionalidades)
+- [Interface de Visualização com Streamlit](#interface-de-visualização-com-streamlit)
+- [Arquitetura](#arquitetura)
+- [Instalação e Execução do Projeto](#instalação-e-execução-do-projeto)
+- [Configuração](#configuração)
+- [Equipe](#equipe)
+- [Licença](#licença)
 
-### Algoritmo Genético
-- **Otimização de Parâmetros**: Encontra automaticamente os melhores parâmetros para processamento de imagens (threshold, blur, dilatação e erosão)
-1. Threshold (limiarização)
-Converte a imagem para preto e branco com base em um valor limite.
-Para que serve? Separar objetos do fundo (por ex: detectar texto ou formas).
+## 🎯 Sobre o Projeto
 
-2. Blur (borramento/desfoque)
-Aplica um desfoque para suavizar a imagem.
-Para que serve? Reduz ruído (pixels aleatórios), antes de detectar contornos ou aplicar threshold.
+Este projeto implementa um sistema de processamento de imagens de captcha utilizando um **Algoritmo Genético (AG)** robusto e configurável para otimizar parâmetros de processamento de imagem. Inspirado nos princípios da evolução natural, o algoritmo utiliza operadores genéticos como seleção, crossover e mutação para evoluir soluções ao longo de gerações sucessivas. O objetivo é remover linhas e ruídos de imagens de captcha para melhorar a legibilidade dos caracteres, facilitando sua posterior leitura por sistemas OCR ou humanos.
 
-3. Dilate (dilatação)
-Aumenta as regiões brancas.
-Para que serve? Preencher buracos em objetos ou unir partes desconectadas.
+## ✨ Características e Funcionalidades
 
-4. Erode (erosão)
-Reduz as regiões brancas.
-Para que serve? Remover pequenos ruídos ou separar objetos grudados.
+- **🔧 Otimização de Parâmetros**: Encontra automaticamente os melhores parâmetros para processamento de imagens (threshold, blur, dilatação e erosão)
+- **🔄 Threshold (limiarização)**: Converte a imagem para preto e branco com base em um valor limite. Para que serve? Separar objetos do fundo (por ex: detectar texto ou formas).
+- **📝 Blur (borramento/desfoque)**: Aplica um desfoque para suavizar a imagem. Para que serve? Reduz ruído (pixels aleatórios), antes de detectar contornos ou aplicar threshold.
+- **👁️ Dilate (dilatação)**: Aumenta as regiões brancas. Para que serve? Preencher buracos em objetos ou unir partes desconectadas.
+- **🚀 Erode (erosão)**: Reduz as regiões brancas. Para que serve? Remover pequenos ruídos ou separar objetos grudados.
+- **🎲 Avaliação de Aptidão**: Calcula a similaridade entre a imagem processada e uma imagem alvo ideal
+- **📈 Evolução da População**: Implementa seleção, cruzamento e mutação para evoluir os parâmetros ao longo das gerações
+- **📊 Processamento em Lote**: Processa múltiplos captchas sequencialmente e salva os resultados
 
-- **Avaliação de Aptidão**: Calcula a similaridade entre a imagem processada e uma imagem alvo ideal
-- **Evolução da População**: Implementa seleção, cruzamento e mutação para evoluir os parâmetros ao longo das gerações
-- **Processamento em Lote**: Processa múltiplos captchas sequencialmente e salva os resultados
-
-### Interface de Visualização com Streamlit
+## 🖥️ Interface de Visualização com Streamlit
 - **Visualização em Tempo Real**: Acompanha a evolução do algoritmo genético geração por geração
 - **Gráficos de Desempenho**: Exibe gráficos de aptidão ao longo das gerações
 - **Visualização de Imagens**: Mostra a imagem original, processada e alvo lado a lado
 - **Configuração Interativa**: Permite ajustar parâmetros do algoritmo genético
 
-## Requisitos
-- Python 3.6+
-- OpenCV (cv2)
+## 🏗️ Arquitetura
+
+```
+genetic-algorithm/
+├── imgs/
+│   ├── captcha1.png
+│   ├── captcha1_target.png
+│   ├── ...
+├── samples/
+│   ├── 2b827.png
+│   ├── 3b4we.png
+│   ├── ...
+├── algoritmo_genetico_processador_streamlit.py
+├── obter_captchas_kaggle.py
+├── requirements.txt
+└── README.md
+└── LICENSE
+```
+
+## 🚀 Instalação e Execução do Projeto
+
+### Pré-requisitos
+
+- Python 3.6 ou superior
+- Pip
+- OpenCV Python (cv2)
 - NumPy
 - Pandas
 - Matplotlib
 - Streamlit
+- Kagglehub
 
-## Instalação
-1. Clone o repositório ou baixe os arquivos
-2. Instale as dependências necessárias:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Instalação via pip
 
-## Uso
-
-### Executar o Algoritmo Genético
-Para iniciar a interface Streamlit e visualizar a evolução do algoritmo genético:
 ```bash
+# Clone o repositório
+git clone https://github.com/RafaelGuido/TC_FASE2
+cd genetic-algorithm-processing-captcha
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Para iniciar a interface Streamlit e visualizar a evolução do algoritmo genético:
 python -m streamlit run algoritmo_genetico_streamlit.py
 ```
 
-## Estrutura de Arquivos
-- `algoritmo_genetico_streamlit.py`: Interface Streamlit para visualização da evolução do algoritmo genético
-- `imgs/`: Pasta contendo os pares de imagens de captcha e seus targets (ex: `captcha1.png`, `captcha1_target.png`)
-- `samples/`: Pasta contendo imagens de captcha para processamento em lote
-- `resultados/`: Pasta onde são salvos os resultados do processamento
+## ⚙️ Configuração
 
-## Fluxo de Trabalho
+### Fluxo de Trabalho
 
 1. **Fase de Treinamento**:
    - O algoritmo genético processa os pares de captcha/target na pasta `imgs`
@@ -80,7 +98,7 @@ python -m streamlit run algoritmo_genetico_streamlit.py
    - Mostra gráficos de aptidão, parâmetros e imagens processadas
    - Facilita a compreensão e ajuste do algoritmo genético
 
-## Parâmetros Otimizados
+### Parâmetros Otimizados
 O algoritmo genético otimiza os seguintes parâmetros de processamento de imagem:
 
 - `threshold`: Valor de limiarização (50–150)
@@ -89,3 +107,17 @@ O algoritmo genético otimiza os seguintes parâmetros de processamento de image
 - `dilate_shape`: Forma do kernel de dilatação (1–5)
 - `erode_size`: Tamanho do kernel de erosão (1–5)
 - `erode_shape`: Forma do kernel de erosão (1–5)
+
+## 👥 Equipe
+
+Este projeto foi desenvolvido por:
+
+- **[Guilherme Santana](https://www.linkedin.com/in/guilherme-santana-04360917a/)**
+
+- **[Franklin Araujo](https://www.linkedin.com/in/franklinarauj/)**
+
+- **[Rafael Toccolini](https://www.linkedin.com/in/rafaeltoccolini/)**
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
