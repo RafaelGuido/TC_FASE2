@@ -35,7 +35,7 @@ Este projeto implementa um sistema de processamento de imagens de captcha utiliz
 ## 🏗️ Arquitetura
 
 ```
-genetic-algorithm/
+tc_face2/
 ├── imgs/
 │   ├── captcha1.png
 │   ├── captcha1_target.png
@@ -44,7 +44,9 @@ genetic-algorithm/
 │   ├── 2b827.png
 │   ├── 3b4we.png
 │   ├── ...
-├── algoritmo_genetico_processador_streamlit.py
+├── algoritmo_genetico.py
+├── app_streamlit.py
+├── processamento_imagem.py
 ├── obter_captchas_kaggle.py
 ├── requirements.txt
 └── README.md
@@ -75,7 +77,7 @@ cd genetic-algorithm-processing-captcha
 pip install -r requirements.txt
 
 # Para iniciar a interface Streamlit e visualizar a evolução do algoritmo genético:
-python -m streamlit run algoritmo_genetico_streamlit.py
+python -m streamlit run app_streamlit.py
 ```
 
 ## ⚙️ Configuração

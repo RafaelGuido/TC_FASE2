@@ -1,0 +1,35 @@
+# Arquivos de bytecode Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuição / empacotamento
+dist/
+build/
+*.egg-info/
+
+# Ambientes virtuais
+venv/
+env/
+.env/
+
+# Arquivos de IDE e editores
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos de configuração local
+.env
+.env.local
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+.DS_Store
+Thumbs.db
+
+# Arquivos específicos do projeto que não devem ser versionados
+# Descomente conforme necessário
+resultados/
