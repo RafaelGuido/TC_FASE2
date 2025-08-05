@@ -9,6 +9,7 @@
 - [Instalação e Execução do Projeto](#-instalação-e-execução-do-projeto)
 - [Configuração](#-configuração)
 - [Equipe](#-equipe)
+- [Link da Apresentação](#-link-da-apresentação)
 - [Licença](#-licença)
 
 ## 🎯 Sobre o Projeto
@@ -119,6 +120,10 @@ Este projeto foi desenvolvido por:
 - **[Franklin Araujo](https://www.linkedin.com/in/franklinarauj/)**
 
 - **[Rafael Toccolini](https://www.linkedin.com/in/rafaeltoccolini/)**
+
+## 📽️ Link da Apresentação:
+
+- https://www.youtube.com/watch?v=hoP7R6EC1Hk
 
 ## 📄 Licença
 
