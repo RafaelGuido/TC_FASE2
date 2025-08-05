@@ -36,7 +36,7 @@ Este projeto implementa um sistema de processamento de imagens de captcha utiliz
 ## 🏗️ Arquitetura
 
 ```
-TC_FASE2/
+tc_fase2/
 ├── imgs/
 │   ├── captcha1.png
 │   ├── captcha1_target.png
