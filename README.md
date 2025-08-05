@@ -35,7 +35,7 @@ Este projeto implementa um sistema de processamento de imagens de captcha utiliz
 ## 🏗️ Arquitetura
 
 ```
-tc_face2/
+TC_FASE2/
 ├── imgs/
 │   ├── captcha1.png
 │   ├── captcha1_target.png
@@ -44,20 +44,21 @@ tc_face2/
 │   ├── 2b827.png
 │   ├── 3b4we.png
 │   ├── ...
+├── .gitignore
 ├── algoritmo_genetico.py
 ├── app_streamlit.py
-├── processamento_imagem.py
+├── LICENSE
 ├── obter_captchas_kaggle.py
-├── requirements.txt
-└── README.md
-└── LICENSE
+├── processamento_imagem.py
+├── README.md
+└── requirements.txt
 ```
 
 ## 🚀 Instalação e Execução do Projeto
 
 ### Pré-requisitos
 
-- Python 3.6 ou superior
+- Python 3.11.5 ou superior
 - Pip
 - OpenCV Python (cv2)
 - NumPy
@@ -71,7 +72,6 @@ tc_face2/
 ```bash
 # Clone o repositório
 git clone https://github.com/RafaelGuido/TC_FASE2
-cd genetic-algorithm-processing-captcha
 
 # Instale as dependências
 pip install -r requirements.txt
