@@ -1,5 +1,5 @@
 kagglehub==0.3.12
-opencv-contrib-python===4.11.0.86
+opencv-python===4.11.0.86
 numpy==1.26.4
 pandas==2.2.2
 matplotlib==3.10.1
