@@ -59,7 +59,7 @@ tc_fase2/
 
 ### Pré-requisitos
 
-- Python 3.11.5 ou superior
+- Python 3.11
 - Pip
 - OpenCV Python (cv2)
 - NumPy
